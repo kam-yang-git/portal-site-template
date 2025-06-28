@@ -2,11 +2,69 @@
 
 body {
     background-color: #f5f5f5;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+[data-bs-theme="dark"] body {
+    background-color: #181a1b;
+}
+
+[data-bs-theme="dark"] main,
+[data-bs-theme="dark"] footer {
+    background-color: #181a1b;
+    color: #f5f5f5;
+}
+[data-bs-theme="dark"] main {
+    background-color: #181a1b;
+}
+[data-bs-theme="dark"] .category-header {
+    background-color: #191970;
+}
+[data-bs-theme="dark"] .subcategory-header {
+    background-color: #4682b4;
+}
+[data-bs-theme="dark"] .news-container {
+    background-color: #23272b;
+    border-color: #333;
+}
+[data-bs-theme="dark"] .category-header,
+[data-bs-theme="dark"] .subcategory-header,
+[data-bs-theme="dark"] .news-section h3,
+[data-bs-theme="dark"] .news-date,
+[data-bs-theme="dark"] .news-content,
+[data-bs-theme="dark"] .category-header h3,
+[data-bs-theme="dark"] .subcategory-header h4,
+[data-bs-theme="dark"] .subcategory-links li {
+    color: #f5f5f5;
+}
+[data-bs-theme="dark"] .news-item {
+    border-bottom: 1px solid #333;
+}
+[data-bs-theme="dark"] .breadcrumb .breadcrumb-item.active,
+[data-bs-theme="dark"] .breadcrumb-item+.breadcrumb-item::before {
+    color: #f5f5f5 !important;
 }
 
 .navbar-brand {
     font-size: 2rem;
     font-weight: bold;
+}
+
+/* テーマ切り替えボタンの枠線・ホバー色・アイコン色をナビバーの文字色(#fff)に固定 */
+#theme-toggle-btn {
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+#theme-toggle-btn:hover, #theme-toggle-btn:focus {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #fff !important;
+}
+#theme-toggle-btn .bi {
+    color: #fff !important;
 }
 
 .breadcrumb a {
@@ -33,7 +91,7 @@ body {
 }
 
 .news-container {
-    background-color: #fff;
+    background-color: #f7f7f7;
     border: 1px solid #ddd;
     border-radius: 5px;
     max-height: 200px;
@@ -68,7 +126,7 @@ body {
 
 .category-header h3 {
     margin: 0;
-    color: #333;
+    color: #000;
     font-size: 1.4rem;
 }
 
@@ -80,7 +138,7 @@ body {
 
 .subcategory-header h4 {
     margin: 0;
-    color: #333;
+    color: #000;
     font-size: 1.1rem;
 }
 
@@ -102,4 +160,18 @@ body {
 .subcategory-links a:hover {
     color: #0056b3;
     text-decoration: underline;
+}
+
+body,
+main,
+footer,
+.category-header,
+.subcategory-header,
+.news-container,
+.news-item,
+.news-section h3,
+.news-date,
+.news-content,
+.subcategory-links li {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 } 
